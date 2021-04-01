@@ -1,0 +1,17 @@
+name: "DevRel Blox Build"
+description: "Build Your DevRel Blox"
+inputs:
+  command:
+    description: "validate or build?"
+    required: false
+    default: build
+  directory:
+    description: "Where is your blox.yaml?"
+    required: false
+    default: .
+runs:
+  using: "docker"
+  image: ghcr.io/devrel-blox/drb:latest
+  args:
+    - ${{ inputs.directory }}
+    - ${{ inputs.command }}
