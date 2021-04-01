@@ -10,11 +10,11 @@ jobs:
     steps:
     - name: Build Your Blox
       id: build
-      uses: devrel-blox/github-action@v0.0.2
+      uses: devrel-blox/github-action@v0.0.6
       with:
         directory: . #default .
         command: build #default build
 
     - name: Output
-      run: echo "Messages: ${{ steps.build.outputs.messages }}"
+      run: echo "${{ steps.build.outputs.messages }}"
 ```
