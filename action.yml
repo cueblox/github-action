@@ -11,7 +11,7 @@ inputs:
     default: .
 runs:
   using: "docker"
-  image: ghcr.io/devrel-blox/drb:latest
+  image: Dockerfile
   args:
     - ${{ inputs.directory }}
     - ${{ inputs.command }}
