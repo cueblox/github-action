@@ -1,10 +1,10 @@
-name: "DevRel Blox Build"
-description: "Build Your DevRel Blox"
+name: "CueBlox Build"
+description: "CueBlox Build"
 inputs:
-  command:
-    description: "validate or build?"
+  extraArgs:
+    description: "Enforce Referential Integrity?"
     required: false
-    default: build
+    default: ""
   directory:
     description: "Where is your blox.yaml?"
     required: false
@@ -14,4 +14,4 @@ runs:
   image: Dockerfile
   args:
     - ${{ inputs.directory }}
-    - ${{ inputs.command }}
+    - ${{ inputs.extraArgs }}

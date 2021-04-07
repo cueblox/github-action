@@ -1,4 +1,4 @@
-# DevRel Blox GitHub Action
+# CueBlox GitHub Action
 
 ```yaml
 on: [push]
@@ -10,10 +10,10 @@ jobs:
     steps:
     - name: Build Your Blox
       id: build
-      uses: devrel-blox/github-action@v0.0.6
+      uses: cueblox/github-action@v0.0.6
       with:
-        directory: . #default .
-        command: build #default build
+        directory: ./some/dir # Default .
+        extraArgs: --referential-integrity # Default ""
 
     - name: Output
       run: echo "${{ steps.build.outputs.messages }}"

@@ -1,3 +1,3 @@
-FROM ghcr.io/devrel-blox/drb:latest
+FROM ghcr.io/cueblox/blox:latest
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
