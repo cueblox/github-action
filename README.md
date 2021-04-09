@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Build Your Blox
       id: build
-      uses: cueblox/github-action@v0.0.6
+      uses: cueblox/github-action@v0.0.8
       with:
         directory: ./some/dir # Default .
         extraArgs: --referential-integrity # Default ""
